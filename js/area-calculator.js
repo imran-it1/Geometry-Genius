@@ -4,6 +4,12 @@ function calculateTriangleArea (){
     const height = getInputValue('triangle-height')
     const area = 0.5 * base * height;
 
+    // Validate
+    if(isNaN(base) || isNaN(height)){
+        alert('Please insert number')
+        return;
+    }
+
     // Set
     setAreaValue('triangle-area', area)
 }
@@ -14,6 +20,13 @@ function calculateRectangleArea(){
     const width = getInputValue('rectangle-width');
     const height = getInputValue('rectangle-height');
     const area = width * height;
+
+    // Validate
+    if( isNaN(width) || isNaN(height)){
+        alert('Plesae insert number')
+        return;
+    }
+
     // Set
     setAreaValue('rectangle-area', area);
 }
@@ -24,6 +37,13 @@ function calculateParallelogramArea(){
     const base = getInputValue('parallelogram-base');
     const height = getInputValue('parallelogram-height')
     const area = base * height;
+
+    // Validate
+    if( isNaN(base) || isNaN(height)){
+        alert('Plesae insert number')
+        return;
+    }
+
     // Set
     setAreaValue('parallelogram-area', area);
 }
